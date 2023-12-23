@@ -111,7 +111,7 @@ wss.on('connection', function connection(ws) {
         // if (client !== ws && client.readyState === WebSocket.OPEN) {
           if (client && client.readyState === WebSocket.OPEN) {
             
-            client.send(JSON.stringify(message));
+            client.send(JSON.parse(message));
             console.log("sent")
           }
           else{
