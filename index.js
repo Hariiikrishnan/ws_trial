@@ -110,6 +110,7 @@ wss.on('connection', function connection(ws) {
         
         // if (client !== ws && client.readyState === WebSocket.OPEN) {
           if (client && client.readyState === WebSocket.OPEN) {
+            client.send(message);
             client.send(JSON.stringify(message));
             console.log("sent")
           }
@@ -120,5 +121,14 @@ wss.on('connection', function connection(ws) {
           console.log("rendum illa")
         }
     // });
+
+  //     ws.on('close', () => {
+  //   console.log('Client disconnected');
+  //   clientMap.forEach((value, key) => {
+  //     if (value === ws) {
+  //       clientMap.delete(key);
+  //     }
+  //   });
+  // });
   });
 });
