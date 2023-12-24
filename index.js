@@ -123,13 +123,13 @@ wss.on('connection', function connection(ws) {
         }
     // });
 
-      ws.on('close', () => {
-    console.log('Client disconnected');
-    clientMap.forEach((value, key) => {
-      if (value === ws) {
-        clientMap.delete(key);
-      }
-    });
-  });
+  //     ws.on('close', () => {
+  //   console.log('Client disconnected');
+  //   clientMap.forEach((value, key) => {
+  //     if (value === ws) {
+  //       clientMap.delete(key);
+  //     }
+  //   });
+  // });
   });
 });
