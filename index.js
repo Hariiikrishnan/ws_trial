@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
   res.send('Hello, Express!');
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
@@ -121,7 +121,7 @@ wss.on('connection', function connection(ws) {
         }else{
           console.log("rendum illa")
         }
-    // });
+    // });  
 
   //     ws.on('close', () => {
   //   console.log('Client disconnected');
